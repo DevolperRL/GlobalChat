@@ -3,6 +3,12 @@ const http = require("http");
 const WebSocket = require("ws");
 
 const app = express();
+
+// Add the route to handle GET requests to "/"
+app.get("/", (req, res) => {
+  res.send("Hello! Your server is working.");
+});
+
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
