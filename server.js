@@ -4,7 +4,7 @@ const WebSocket = require("ws");
 
 // Create an Express application
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 
 // Serve static files if needed (optional)
 app.use(express.static("public"));
