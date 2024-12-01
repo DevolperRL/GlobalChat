@@ -9,6 +9,11 @@ const port = process.env.PORT || 10000;
 // Serve static files if needed (optional)
 app.use(express.static("public"));
 
+// Handle HTTP requests (optional)
+app.get("/", (req, res) => {
+  res.send("WebSocket Server is active.");
+});
+
 // Create an HTTP server
 const server = http.createServer(app);
 
